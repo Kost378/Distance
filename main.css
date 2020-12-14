@@ -11,6 +11,7 @@
 body{
   background-color:  #E5E5E5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
 }
 header{
   background-color:  #0050B3;
@@ -42,7 +43,7 @@ input[type = "search"]{
   background-repeat:   no-repeat;
   background-position:   right 12px  center ;
   padding: 5px 30px 5px 12px;
-  margin: 6px 12px;
+  margin: 12px 12px;
   flex-basis: 336px;
 }
 .top-nav{
@@ -121,3 +122,60 @@ header a:hover > .header-icon{
    margin-left: 1px;
  }
 /*Костыль*/
+
+.wrapper{
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.right-nav{
+  color: #000;
+  margin-left: 50px;
+  font-size: 14px;
+  flex-basis: 200px;
+
+}
+.right-nav a{
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: background-color .3s ease-in-out;
+  border-radius: 4px;
+
+}
+.right-nav a:hover{
+background-color: #fff;
+}
+.right-nav img{
+  width: 25px;
+  height: 25px;
+}
+.right-nav ul{
+ list-style-type: none;
+ margin-bottom: 30px;
+ color: #595959;
+ display: flex;
+ flex-direction: column;
+}
+
+.right-nav li{
+  padding: 10px 5px 10px 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color .3s ease-in-out;
+}
+.right-nav li:hover{
+  background-color: #fff;
+  color:  #262626;
+  font-weight: 700;
+
+}
+.rigth-user-name{
+  color: #262626;
+}
+.right-nav p{
+  font-weight: bold;
+  color: #262626;
+  padding-left: 10px;
+}

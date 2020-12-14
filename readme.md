@@ -1,1 +1,1 @@
-This my fist try create "social network" :)
+This my first try create "social network" :)

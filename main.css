@@ -153,17 +153,18 @@ background-color: #fff;
 }
 .right-nav ul{
  list-style-type: none;
- margin-bottom: 30px;
+ 
  color: #595959;
  display: flex;
  flex-direction: column;
 }
 
 .right-nav li{
-  padding: 10px 5px 10px 10px;
-  display: block;
+  padding: 3px 5px 3px 10px;
+  display: flex;
   border-radius: 4px;
   transition: background-color .3s ease-in-out;
+  align-items: center;
 }
 .right-nav li:hover{
   background-color: #fff;
@@ -171,11 +172,27 @@ background-color: #fff;
   font-weight: 700;
 
 }
+.right-nav img{
+  padding-right: 5px;
+}
 .rigth-user-name{
   color: #262626;
 }
 .right-nav p{
+  margin-top: 30px;
   font-weight: bold;
   color: #262626;
   padding-left: 10px;
+}
+/* Убираем стандартный маркер Chrome 
+details summary::-webkit-details-marker {
+  background-color: aqua;
+}
+*/
+/* Убираем стандартный маркер Firefox */
+details > summary {
+  /*list-style: none;*/
+  cursor: pointer;
+  padding: 10px 10px;
+  color: #1890FF;
 }

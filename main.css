@@ -43,6 +43,7 @@ input[type = "search"]{
   background-position:   right 12px  center ;
   padding: 5px 30px 5px 12px;
   margin: 6px 12px;
+  flex-basis: 336px;
 }
 .top-nav{
   display: flex;
@@ -114,4 +115,9 @@ header a:hover > .header-icon{
   margin: 0 auto;
   text-align: justify;
  }
- 
+
+ /*Костыль*/
+ #top-home{
+   margin-left: 1px;
+ }
+/*Костыль*/

@@ -42,7 +42,7 @@ input[type = "search"]{
   background-repeat:   no-repeat;
   background-position:   right 12px  center ;
   padding: 5px 30px 5px 12px;
-  margin: 12px 12px;
+  margin: 12px 0 12px 12px;
   flex-basis: 336px;
 }
 .top-nav{
@@ -112,8 +112,9 @@ a.notifications::after{
  main{
   margin-left: 12px;
   flex: 1;
-  max-width: 1280px;
+  max-width: 600px;
   text-align: justify;
+  margin-right: 12px;
 
  }
 
@@ -127,6 +128,7 @@ a.notifications::after{
   padding-top: 70px;
   display: flex;
   justify-content: center;
+  align-content: center;
   max-width: 1200px;
   margin: 0 auto;
   align-items: flex-start;
@@ -134,7 +136,8 @@ a.notifications::after{
 .right-nav{
   color: #000;
   font-size: 14px;
-  flex-basis: 200px;
+  flex-basis: 190px;
+  flex-shrink: 0;
 
 }
 .right-nav a{
@@ -198,15 +201,18 @@ details > summary {
   cursor: pointer;
   padding: 10px 10px;
   color: #1890FF;
+  margin-bottom: 24px;
 }
 
 .main-header{
 
   background-color: #fff;
+  margin-bottom: 18px;
 
 }
 .shadow{
   box-shadow: 0 5px 3px 3px #d0d0d0;
+
 }
 .main-header h2{
   background-color: #e5e5e5;
@@ -256,12 +262,12 @@ button.other{
 }
 .main-user span{
   color: #8c8c8c;
-  width: 100%;
+  width: 95%;
   display: block;
   max-width: 520px;
 }
 .right-section{
-  margin-left: 12px;
+  
   background-color: #fff;
   flex-basis: 384px;
   padding: 15px;
@@ -305,4 +311,64 @@ button.other{
 }
 .setting a:hover{
   text-decoration: underline;
+}
+
+.section-main{
+  padding: 18px;
+}
+.section-main p{
+  line-height: 24px;
+  color: #595959;
+  margin-bottom: 12px;
+}
+.section-main footer{
+  display: flex;
+}
+.section-main .relation{
+  margin-top: 12px;
+  height: 40px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #595959;
+  cursor: pointer;
+}
+.section-main .relation svg {
+  fill: #595959;
+}
+.section-main .relation:hover{
+  background-color: #ececec;
+}
+.section-main .relation:hover > svg{
+  fill: #0050B3;
+}
+.section-main .relation:hover > span{
+  color: #0050B3;
+}
+.section-main .relation span{
+  margin-left: 6px;
+}
+
+@media screen and (max-width: 1070px){
+  .right-section{
+    display: none;
+  }
+}
+@media screen and (max-width: 826px){
+  .wrapper{
+    padding-top: 120px;
+    flex-direction: column;
+  }
+  .right-nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .top-nav{
+    flex-wrap: wrap;
+    padding-right: 20px;
+  }
+
 }

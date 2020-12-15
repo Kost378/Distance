@@ -112,7 +112,7 @@ a.notifications::after{
  main{
   margin-left: 12px;
   flex: 1;
-  max-width: 600px;
+/* max-width: 600;*/
   text-align: justify;
   margin-right: 12px;
 
@@ -222,6 +222,11 @@ details > summary {
   padding: 10px;
 
 }
+
+.right-icons{
+  display: flex;
+  justify-content: space-between;
+}
 .main-header hr{
   width: 95%;
   border: 2px solid #e5e5e5;
@@ -229,6 +234,7 @@ details > summary {
 }
 .footer{
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -358,8 +364,10 @@ button.other{
 }
 @media screen and (max-width: 826px){
   .wrapper{
-    padding-top: 120px;
+    padding: 120px 0 0 0;
     flex-direction: column;
+    max-width: 90vw;
+
   }
   .right-nav ul{
     display: flex;
@@ -368,7 +376,29 @@ button.other{
   }
   .top-nav{
     flex-wrap: wrap;
-    padding-right: 20px;
+    padding-right: 0;
+  }
+ 
+  img {
+    max-width: 100%;
+  }
+  main{
+    width: 100%;
+    margin: 0;
   }
 
+}
+@media screen and (max-width: 504px){
+  .wrapper{
+    padding: 150px 0 0 0;
+  }
+  .right-icons{
+    width: 100vw;
+  }
+  .relation span{
+    display: none;
+  }
+  .top-nav{
+    font-size: 2vmax;
+  }
 }

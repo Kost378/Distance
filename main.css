@@ -129,6 +129,7 @@ a.notifications::after{
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 .right-nav{
   color: #000;
@@ -200,9 +201,12 @@ details > summary {
 }
 
 .main-header{
-  box-shadow: 0 5px 3px #d0d0d0;
+
   background-color: #fff;
 
+}
+.shadow{
+  box-shadow: 0 5px 3px 3px #d0d0d0;
 }
 .main-header h2{
   background-color: #e5e5e5;
@@ -231,12 +235,19 @@ details > summary {
   border: none;
   margin: 10px 5px;
   padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer button:hover{
   background-color: #fff;
 }
+.footer span{
+  margin-left: 5px;
+}
 button.other{
   flex-basis: 10%;
+  font-weight: bold;
 }
 .main-user{
   display: flex;
@@ -247,4 +258,51 @@ button.other{
   color: #8c8c8c;
   width: 100%;
   display: block;
+  max-width: 520px;
+}
+.right-section{
+  margin-left: 12px;
+  background-color: #fff;
+  flex-basis: 384px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.right-section h3{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.right-header{
+  display: flex;
+  justify-content: space-between;
+}
+.right-header a{
+  margin-left: 10px;
+  color: #0050B3;
+}
+.right-header span{
+  font-weight: bold;
+}
+
+.right-item{
+  display: flex;
+  padding-bottom: 15px;
+}
+.description-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 5px;
+
+}
+.right-item span{
+  color: #8c8c8c;
+}
+.right-item a{
+  font-weight: bold;
+  color: #0050B3;
+}
+.setting a:hover{
+  text-decoration: underline;
 }

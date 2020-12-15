@@ -13,11 +13,10 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
 }
-header{
+.page-header{
   background-color:  #0050B3;
   filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15));
   position: fixed;
-
   width: 100vw;
 
 }
@@ -29,7 +28,7 @@ header{
   flex-wrap: wrap;
   align-items: center;
 }
- header a{
+.page-header a{
   color: #ffffff;
  }
 input{
@@ -100,37 +99,39 @@ a.notifications::after{
   fill: #002766;
   transition: fill 0.3s ease-in-out;
 }
-header a:hover{
+.page-header a:hover{
   background-color: rgb(38, 101, 179);
 }
-header a:hover > .header-icon{
+.page-header a:hover > .header-icon{
   fill: #fff;
 }
 .user-avatar{
   margin: 8px 12px 8px 0px;
  }
+ 
  main{
-  padding-top: 60px;
-  width: 50%;
+  margin-left: 12px;
+  flex: 1;
   max-width: 1280px;
-  margin: 0 auto;
   text-align: justify;
+
  }
 
- /*Костыль*/
+ /*Костыль
  #top-home{
-   margin-left: 1px;
- }
-/*Костыль*/
+  margin-left: 1px;
+}
+*/
 
 .wrapper{
   padding-top: 70px;
   display: flex;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .right-nav{
   color: #000;
-  margin-left: 50px;
   font-size: 14px;
   flex-basis: 200px;
 
@@ -139,17 +140,23 @@ header a:hover > .header-icon{
   color: #000;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+
   transition: background-color .3s ease-in-out;
   border-radius: 4px;
 
 }
 .right-nav a:hover{
-background-color: #fff;
+  background-color: #fff;
+  color:  #262626;
+  font-weight: 700;
 }
-.right-nav img{
-  width: 25px;
-  height: 25px;
+.right-avatar{
+  width: 24px;
+  height: 24px;
+  padding-left: 10px;
+}
+.icon-name{
+  padding-left: 10px;
 }
 .right-nav ul{
  list-style-type: none;
@@ -166,13 +173,8 @@ background-color: #fff;
   transition: background-color .3s ease-in-out;
   align-items: center;
 }
-.right-nav li:hover{
-  background-color: #fff;
-  color:  #262626;
-  font-weight: 700;
 
-}
-.right-nav img{
+.right-nav li img{
   padding-right: 5px;
 }
 .rigth-user-name{
@@ -195,4 +197,54 @@ details > summary {
   cursor: pointer;
   padding: 10px 10px;
   color: #1890FF;
+}
+
+.main-header{
+  box-shadow: 0 5px 3px #d0d0d0;
+  background-color: #fff;
+
+}
+.main-header h2{
+  background-color: #e5e5e5;
+  color: #595959;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  padding: 10px;
+
+}
+.main-header hr{
+  width: 95%;
+  border: 2px solid #e5e5e5;
+  margin: 0 auto;
+}
+.footer{
+  display: flex;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.footer button{
+  height: 40px;
+  border-radius: 20px;
+  flex-basis: 20%;
+  background-color: #e5e5e5;
+  outline: none;
+  border: none;
+  margin: 10px 5px;
+  padding: 0 10px;
+}
+.footer button:hover{
+  background-color: #fff;
+}
+button.other{
+  flex-basis: 10%;
+}
+.main-user{
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+.main-user span{
+  color: #8c8c8c;
+  width: 100%;
+  display: block;
 }

@@ -420,10 +420,6 @@ button.other{
 .share{
   justify-content: flex-end;
 }
-
- .share span{
-  margin-left: 20px;
-}
-.like span{
+.count{
   margin-left: 20px;
 }

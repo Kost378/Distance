@@ -80,11 +80,11 @@ a.none-separation{
   margin-right: 12px;
 }
 
-a.notifications::after{
+.notifications::after{
   color: #fff;
   font-size: 10px;
   font-weight: 600;
-  content: "14";
+  content: attr(data-count);
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -112,7 +112,7 @@ a.notifications::after{
  
  main{
   margin-left: 12px;
-  flex: 1;
+
 /* max-width: 600;*/
   text-align: justify;
   margin-right: 12px;
@@ -135,10 +135,13 @@ a.notifications::after{
   align-items: flex-start;
 }
 .right-nav{
+
+  
   color: #000;
-  font-size: 14px;
+ 
   flex-basis: 190px;
   flex-shrink: 0;
+
 
 }
 .right-nav a{
@@ -344,6 +347,10 @@ button.other{
   border-radius: 10px;
   color: #595959;
   cursor: pointer;
+  user-select: none;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
 }
 .section-main .relation svg {
   fill: #595959;
@@ -360,24 +367,28 @@ button.other{
 .section-main .relation span{
   margin-left: 6px;
 }
-
-@media screen and (max-width: 1070px){
+.post-img{
+  width: 100%;
+}
+@media screen and (max-width: 1075px){
   .right-section{
     display: none;
   }
+ 
 }
-@media screen and (max-width: 826px){
+
+@media screen and (max-width: 771px){
   .wrapper{
     padding: 120px 0 0 0;
     flex-direction: column;
     max-width: 90vw;
 
   }
-  .right-nav ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .right-nav{
+    display: none;
+
   }
+  
   .top-nav{
     flex-wrap: wrap;
     padding-right: 0;
@@ -389,6 +400,15 @@ button.other{
   main{
     width: 100%;
     margin: 0;
+  }
+  .icon-name{
+    display: none !important;
+  }
+  .show-menu{
+    display: inline-block !important;
+  }
+  .show{
+    top: 100px;
   }
 
 }
@@ -405,10 +425,17 @@ button.other{
   .top-nav{
     font-size: 2vmax;
   }
+  .show{
+    flex-direction: column !important;
+    top: 140px;
+    
+  }
 }
 
 .active{
-  fill: #0050B3 !important;
+  fill: #0050B3;
+  color: #0050B3;
+
 }
 
 .like, .share{
@@ -425,4 +452,29 @@ button.other{
 }
 .count{
   margin-left: 20px;
+  font-weight: bold;
+}
+.show-menu{
+  background-color: #1890FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  display: none;
+}
+.show-menu:active{
+  border: 2px solid #000;
+
+}
+
+
+.show{
+  display: flex;
+  
+  width: 92.5%;
+  font-size: 2vmax;
+  position: fixed;
+  background-color: #E5E5E5;
+  flex-direction: row;
+  justify-content: space-around;
 }

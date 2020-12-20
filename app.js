@@ -19,31 +19,23 @@ for(let i = 0; i < items.length - 1; i++){
   }
 
 }
+/* */
+let addRelations = (item) => {
+    let active = document.querySelector(`.${item}`);
+    let button = document.querySelector(`#button-${item}-1`);
+    button.onclick = () => {
+    classes = active.children[0].classList;
+    classes.toggle('active');
 
-let like = function(){
-  let like = document.querySelector(".like");
-  let button = document.querySelector("#button-like-1");
-  button.onclick = function(){
-    like.children[0].classList.add('active');
-    like.children[1].classList.add('active');
-    like.children[1].innerText = +like.children[1].innerText + 1;
-  }
+    active.children[1].classList.toggle('active');
+    active.children[1].innerText = classes.contains('active') ? 
+                             +active.children[1].innerText + 1 :
+                              +active.children[1].innerText - 1;
+    }
 }
-like();
 
-let share = function(){
-  let share = document.querySelector(".share");
-  let button = document.querySelector("#button-share-1");
-  button.onclick = function(){
-    share.children[0].classList.add('active');
-    share.children[1].classList.add('active');
-    share.children[1].innerText = +share.children[1].innerText + 1;    
-  }
-}
-share();
-
-
-
+addRelations('like');
+addRelations('share');
 
 
 

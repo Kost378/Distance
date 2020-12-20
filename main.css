@@ -6,6 +6,9 @@
   text-decoration: none;
 
 }
+:root{
+  --grey: #fff;
+}
 
 
 body{
@@ -165,6 +168,7 @@ a.none-separation{
 }
 .icon-name{
   padding-left: 10px;
+  margin: 0;
 }
 .right-nav ul{
  list-style-type: none;
@@ -189,7 +193,7 @@ a.none-separation{
   color: #262626;
 }
 .right-nav p{
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
   color: #262626;
   padding-left: 10px;
@@ -257,6 +261,8 @@ details{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
+
 }
 .footer button:hover{
   background-color: #fff;
@@ -265,8 +271,9 @@ details{
   margin-left: 5px;
 }
 button.other{
-  flex-basis: 10%;
+  max-width: 50px;
   font-weight: bold;
+
 }
 .main-user{
   display: flex;
@@ -334,9 +341,11 @@ button.other{
   color: #595959;
   margin-bottom: 12px;
 }
-.section-main footer{
+
+.footer-poost {
   display: flex;
 }
+
 .section-main .relation{
   margin-top: 12px;
   height: 40px;
@@ -347,10 +356,12 @@ button.other{
   border-radius: 10px;
   color: #595959;
   cursor: pointer;
-  user-select: none;
+
   border: none;
   font-size: 1rem;
   background-color: transparent;
+  position: relative;
+
 }
 .section-main .relation svg {
   fill: #595959;
@@ -430,6 +441,7 @@ button.other{
     top: 140px;
     
   }
+
 }
 
 .active{
@@ -450,6 +462,56 @@ button.other{
 .share{
   justify-content: flex-end;
 }
+.under-share{
+  display: none;
+  position: absolute;
+  background-color: #fff;
+
+  bottom: 40px;
+  box-shadow: 0 0 5px #8c8c8c;
+  
+}
+
+
+.under-share ul{
+  list-style-type: none;
+}
+
+.under-share ul div{
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.under-share ul div::after{
+  content: " ";
+  background-color: #fff;
+  height: 12px;
+  width: 12px;
+  bottom: -6px;
+  left: 70px;
+  transform: rotate(45deg);
+  display: block;
+  position: absolute;
+}
+
+.under-share ul div:hover:after{
+  background-color: #e5e5e5;
+}
+
+
+.under-share li:hover{
+  background-color: #e5e5e5;
+
+}
+#button-share-1:hover .under-share{
+  display: block;
+
+}
+
+
+
+
 .count{
   margin-left: 20px;
   font-weight: bold;

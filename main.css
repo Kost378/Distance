@@ -341,7 +341,13 @@ button.other{
   color: #595959;
   margin-bottom: 12px;
 }
-
+.header-post{
+  display: flex;
+  justify-content: space-between;
+}
+.hide{
+  cursor: pointer;
+}
 .footer-poost {
   display: flex;
 }
@@ -361,7 +367,6 @@ button.other{
   font-size: 1rem;
   background-color: transparent;
   position: relative;
-
 }
 .section-main .relation svg {
   fill: #595959;
@@ -466,7 +471,6 @@ button.other{
   display: none;
   position: absolute;
   background-color: #fff;
-
   bottom: 40px;
   box-shadow: 0 0 5px #8c8c8c;
   
@@ -504,6 +508,8 @@ button.other{
   background-color: #e5e5e5;
 
 }
+
+
 #button-share-1:hover .under-share{
   display: block;
 
